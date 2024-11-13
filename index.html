@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blog Website </title>
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<!-- Header container -->
+	<!-- Header container -->
+	<div id="header-container">
+        <!-- Header -->
+        <div id="header">
+
+
+            <!-- Logo -->
+            <a href="index.html">
+				<div class="logo">
+				  <img src="img/logo2.png" alt="logo">
+				</div>
+			  </a>
+            
+
+            <!-- Mobile -->
+            <div id="mobile-btn">
+                <a id="open-btn" href="javascript:void(0);" onclick="openNav();"><i class="fa fa-bars"></i></a>
+                <a id="close-btn" href="javascript:void(0);" onclick="closeNav();"><i class="fa fa-times"></i></a>
+            </div>
+    
+            <!-- Navbar -->
+            <div id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="cities.html">Cities</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="travel-tips.html">Travel Tips</a></li>
+                </ul>
+            </div>
+    
+
+
+<!-- Search Modal -->
+
+<div id="searchOverlay" class="search-overlay hidden">
+	<div class="search-container">
+	  <input type="text" id="searchInput" placeholder="Find on page...">
+	  <div class="search-controls">
+		     <span id="searchCount">No results</span>
+		     <button id="prevMatch" disabled>↑</button>
+		     <button id="nextMatch" disabled>↓</button>
+		     <button id="closeSearch">✕</button>
+	</div>
+	        </div>
+</div>
+
+           <button class="search-btn">Search</button>
+		</div>
+    </div>
+
+
+	
+
+	<!-- Main container -->
+	<div id="main-container">
+		<h1>Yemen</h1>
+		<p>Yemen is a country located at the southern end of the Arabian Peninsula, known for its rich history and diverse culture.</br> 
+		It has been a crossroads for civilizations for thousands of years, featuring ancient trade routes that connected the East and West.</p>
+
+			<!-- <button>Explore Yemen</button> -->
+	</div>
+	
+
+
+
+
+
+		                                        <!-- Blog container -->
+
+
+<!--the Efficient way
+
+<div id="blog-container">
+	<div class="blog-content" onclick="openPopup('Neptune', 'img/yemen11.jpg', 'mmmmm')">
+        <img src="img/yemen11.jpg" alt="work1">
+        <div class="blog-detail">
+            <h2>xxxxxxxxxxxxxxxxx</h2>
+            <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxx.</p>
+            <a href="#">Read More...</a>
+        </div>
+    </div>
+    <div id="blog-container">
+		<div class="blog-content" onclick="openPopup('Mokha', 'img/mokha.jpg', 'Mokha is a port city on the Red Sea coast of Yemen, known for its historical significance in coffee production.')">
+			<img src="img/mokha.jpg" alt="work3">
+			<div class="blog-detail">
+				<h2>xxxxxxxxxxxxxxxxx</h2>
+				<p>xxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxx.</p>
+				<a href="#">Read More...</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+-->
+
+	<!-- Blog container                                  the basic way tow columns -->
+	<div id="blog-container">
+		<div id="blog">
+			<h2>Recent Posts</h2>
+			<div id="blog-container-flex">
+
+
+				<!-- Left container -->
+				<div id="blog-container-left">
+					<div class="blog-content" onclick="openPopup('The Trees and Island of Socotra', 'img/yemen43.jpg', 'Socotra, an island off the coast of Yemen, is famous for its unique and alien-like trees, particularly the Dragon’s Blood Tree. The island’s biodiversity, makes it a UNESCO World Heritage Site and a true natural wonder.')">
+						<img src="img/yemen11.jpg" alt="work4">
+						<div class="blog-detail">
+							<h2>The Trees and Island of Socotra</h2>
+							<p>Socotra, an island off the coast of Yemen. The island’s biodiversity, makes it a UNESCO World Heritage Site and a true natural wonder.</p>
+							<a href="#">Read More...</a>
+						</div>
+					</div>
+					<div class="blog-content" onclick="openPopup('Taiz: The City of Culture and History', 'img/taiz.jpg', 'Known as the cultural capital of Yemen. It is home to historical sites like the Al-Qahira Castle and the city’s old architecture, which tell the story of Yemen’s past.')">
+						<img src="img/taiz.jpg" alt="work4">
+						<div class="blog-detail">
+							<h2>Taiz: The City of Culture and History</h2>
+							<p>Known as the cultural capital of Yemen. It is home to historical sites like the Al-Qahira Castle and the city’s old architecture, which tell the story of Yemen’s past.</p>
+							<a href="#">Read More...</a>
+						</div>
+					</div>
+					<div class="blog-content" onclick="openPopup('Dragon’s Blood Tree', 'img/yemen85.jpg', 'The Dragon’s Blood Tree Is One of many special trees that are only located on the island of Socotra this tree is very special and unique because of what comes out of it which is a red color liquid.')">
+						<img src="img/yemen85.jpg" alt="work4">
+						<div class="blog-detail">
+							<h2>Dragon’s Blood Tree</h2>
+							<p>The Dragon’s Blood Tree Is One of many special trees that are only located on the island of Socotra this tree is very special and unique because of what comes out of it which is a red color liquid.</p>
+							<a href="#">Read More...</a>
+						</div>
+					</div>
+					<div class="blog-content" onclick="openPopup('Al-Muhdar Mosque or Al-Mihdar Mosque', 'img/yemen38.jpg', 'Al-Muhdar Mosque or Al-Mihdar Mosque is one of the historical mosques in the ancient city of Tarim, in the Yemeni province of Hadramaut. It is attributed to Omar Al-Mihdar bin Abdul-Rahman Al-Saqqaf, a Muslim leader who lived in the city during the 15th-century')">
+						<img src="img/yemen38.jpg" alt="work4">
+						<div class="blog-detail">
+							<h2>Al-Muhdar Mosque or Al-Mihdar Mosque</h2>
+							<p>One of the historical mosques in the ancient city of Tarim, in the Yemeni province of Hadramaut. It is attributed to Omar Al-Mihdar bin Abdul-Rahman Al-Saqqaf, a Muslim leader who lived in the city during the 15th-century</p>
+							<a href="#">Read More...</a>
+						</div>
+					</div>
+					<div class="blog-content" onclick="openPopup('The Dar al-Hajar', 'img/Dar Alhajar.JPG', 'The Dar al-Hajar is a former royal palace located in Wadi Dhar about 15 kilometres from Sanaa, Yemen. Built in 1920 as the summer retreat of Yahya Muhammad Hamid ed-Din, Imam of Yemen from 1904 to 1948, it sits on top of a structure built in 1786 for the scholar al-Imam Mansour.')">
+						<img src="img/Dar Alhajar.JPG" alt="work4">
+						<div class="blog-detail">
+							<h2>The Dar al-Hajar</h2>
+							<p>The Dar al-Hajar is a former royal palace located in Wadi Dhar about 15 kilometres from Sanaa, Yemen. Built in 1920 as the summer retreat of Yahya Muhammad Hamid ed-Din, it sits on top of a structure built in 1786 for the scholar al-Imam Mansour.</p>
+							<a href="#">Read More...</a>
+						</div>
+					</div>
+				</div>
+				
+
+
+				<!-- left side --------------------------------------------- -->
+				
+
+
+				<div id="blog-container-right">
+					<div class="blog-content" onclick="openPopup('Jamia Al-Saleh in Sana', 'img/Al-Saleh-Mosque.jpg', 'Jamia Al-Saleh, one of the most prominent mosques in Sana, reflects the grandeur of Islamic architecture.')">
+						<img src="img/Al-Saleh-Mosque.jpg" alt="work2">
+						<div class="blog-detail">
+							<h2>Jamia Al-Saleh in Sana'a</h2>
+							<p>Jamia Al-Saleh, one of the most prominent mosques in Sana'a, reflects the grandeur of Islamic architecture.</p>
+							<a href="#">Read More...</a>
+						</div>
+					</div>
+					<div class="blog-content" onclick="openPopup('City of Ibb', 'img/yemen33.jpg', 'Ibb, located in the highlands of Yemen, is known for its stunning landscapes and pleasant climate. With ancient buildings and lush green valleys surrounding it, making it one of the most beautiful places in Yemen.')">
+						<img src="img/yemen33.jpg" alt="work4">
+						<div class="blog-detail">
+							<h2>City of Ibb</h2>
+							<p>Ibb, located in the highlands of Yemen, is known for its stunning landscapes and pleasant climate. With ancient buildings and lush green valleys surrounding it, making it one of the most beautiful places in Yemen.</p>
+							<a href="#">Read More...</a>
+						</div>
+					</div>
+					<div class="blog-content" onclick="openPopup('Yemens Timeless Beauty', 'img/yemen83.jpg', 'Yemen s ancient cities, especially Sanaa, are renowned for their stunning mud-brick architecture. These towering structures, adorned with intricate gypsum decorations, are a testament to the ingenuity of Yemeni craftsmen. Despite facing threats, these architectural marvels continue to captivate visitors with their timeless beauty.')">
+						<img src="img/yemen83.jpg" alt="work4">
+						<div class="blog-detail">
+							<h2>Yemen's architectur </h2>
+							<p>Yemen's ancient cities, especially Sana'a, are renowned for their stunning mud-brick architecture.These architectural marvels continue to captivate visitors with their timeless beauty. </p>
+							<a href="#">Read More...</a>
+						</div>
+					</div>
+					<div class="blog-content" onclick="openPopup('Socotra island Sea and beaches', 'img/yemen999.jpg', 'Socotra Island, a UNESCO World Heritage Site, is a true natural wonder. With its otherworldly landscapes, unique flora and fauna, and pristine beaches, it is a paradise for nature lovers.')">
+						<img src="img/yemen121212.jpg" alt="work4">
+						<div class="blog-detail">
+							<h2>Socotra island Sea and beaches</h2>
+							<p>Socotra Island, a UNESCO World Heritage Site, is a true natural wonder. With its otherworldly landscapes, unique flora, and pristine beaches, it's a paradise for nature lovers.</p>
+							<a href="#">Read More...</a>
+						</div>
+					</div>
+					<div class="blog-content" onclick="openPopup('The Bugshan Palace, located in Hadramaut, Yemen 🇾🇪❤️', 'img/yemen212.jpg', 'It was constructed entirely of mud in 1798 CE. The palace occupies an area of 800 square meters and features eight floors.')">
+						<img src="img/yemen212.jpg" alt="work4">
+						<div class="blog-detail">
+							<h2>The Bugshan Palace, in Hadramaut</h2>
+							<p>It was constructed entirely of mud in 1798 CE. The palace occupies an area of 800 square meters and features eight floors.</p>
+							<a href="#">Read More...</a>
+						</div>
+					</div>
+				</div>
+				
+
+
+
+
+
+<!-- Popup Structure -->
+<div id="popup" class="popup">
+	<div class="popup-content">
+		<span class="close" onclick="closePopup()">&times;</span>
+		<h2 id="popup-title"></h2>
+		<img id="popup-image" src="" alt="Popup Image">
+		<p id="popup-description"></p>
+	</div>
+</div>
+
+
+
+
+				
+
+				<!--------------------------------------- Right container 
+				<div id="blog-container-right">
+					 Popular Posts 
+					<div class="right-content">
+						<h2>Popular Posts</h2>
+						<div class="right-content-posts">
+							<img src="img/yemen33.jpg" alt="work3">
+							<div class="right-detail">
+								<p>Titan is the largest moon of Saturn.</p>
+								<p>5 Nuv 2024</p>
+							</div>
+						</div>
+						<div class="right-content-posts">
+							<img src="img/yemen33.jpg" alt="work3">
+							<div class="right-detail">
+								<p>Titan is the largest moon of Saturn.</p>
+							</div>
+						</div>
+						<div class="right-content-posts">
+							<img src="img/yemen33.jpg" alt="work3">
+							<div class="right-detail">
+								<p>Titan is the largest moon of Saturn.</p>
+							</div>
+						</div>
+						<div class="right-content-posts">
+							<img src="img/yemen33.jpg" alt="work3">
+							<div class="right-detail">
+								<p>Titan is the largest moon of Saturn.</p>
+							</div>
+						</div>
+						<div class="right-content-posts">
+							<img src="img/yemen33.jpg" alt="work3">
+							<div class="right-detail">
+								<p>Titan is the largest moon of Saturn.</p>
+							</div>
+						</div>
+						<div class="right-content-posts">
+							<img src="img/yemen33.jpg" alt="work3">
+							<div class="right-detail">
+								<p>Titan is the largest moon of Saturn.</p>
+							</div>
+						</div>
+					</div>				
+				</div>
+
+				 ---------------------------------------------->
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+	<!-- About container -->
+	<div id="about-container">
+		<p>Yemen is also known for its warm hospitality, with a rich tradition of welcoming guests and sharing meals, such as the famous Mandi and traditional bread.</br>
+		The diverse landscapes, from the coastal plains to the mountainous regions, provide ample opportunities for adventure and exploration.</p>
+		
+		<a href="https://www.britannica.com/place/Yemen" target="_blank">
+			<button class="explore-button">Explore More About Yemen</button>
+		</a>
+			</div>
+
+
+	<!-- Footer -->
+
+<div id="footer-container">
+    <div id="footer">
+        <ul class="footer-content">
+            <li><a href="#" class="contact-link">Contact Us</a></li>
+            <span class="separator"></span> <!-- Separator line -->
+            <li class="social-icons"><a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+            <li class="social-icons"><a href="https://www.instagram.com/17.insta/"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+	<!-- Copyright -->
+	<div id="copyright">
+		<hr>
+		<p>&copy; All Rights Reserved | Designed by: <span><a href="https://github.com/yemeni-coder">yemeni-coder</a></span></p>
+	</div>
+
+
+
+	<script src="script.js"></script>
+</body>
+
+</html>

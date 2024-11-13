@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blog Website </title>
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+
+/* Travel Tips Container Styling */
+.travel-tips-container {
+    margin: 10px auto;  /* The distance between the container of the content and the image at the top*/
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between each section */
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #f5f7fa; /* Light background color for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual Tip Section Styling */
+.tip-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tip-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Header Styling */
+.tip-section h2 {
+    color: #3498db;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Section Paragraph Styling */
+.tip-section p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* List Styling */
+.tip-section ul {
+    padding-left: 20px;
+}
+
+.tip-section ul li {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.tip-section ul li:before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+
+
+    </style>
+    
+</style>
+</head>
+
+<body>
+	<!-- Header container -->
+	<div id="header-container">
+        <!-- Header -->
+        <div id="header">
+
+
+
+             <!-- Logo -->
+            <a href="index.html">
+				<div class="logo">
+				  <img src="img/logo2.png" alt="logo">
+				</div>
+			  </a>
+            
+            <!-- Mobile -->
+            <div id="mobile-btn">
+                <a id="open-btn" href="javascript:void(0);" onclick="openNav();"><i class="fa fa-bars"></i></a>
+                <a id="close-btn" href="javascript:void(0);" onclick="closeNav();"><i class="fa fa-times"></i></a>
+            </div>
+    
+            <!-- Navbar -->
+            <div id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="cities.html">Cities</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="travel-tips.html">Travel Tips</a></li>
+                </ul>
+            </div>
+    
+<div id="searchOverlay" class="search-overlay hidden">
+	<div class="search-container">
+	  <input type="text" id="searchInput" placeholder="Find on page...">
+	  <div class="search-controls">
+		     <span id="searchCount">No results</span>
+		     <button id="prevMatch" disabled>↑</button>
+		     <button id="nextMatch" disabled>↓</button>
+		     <button id="closeSearch">✕</button>
+	</div>
+	        </div>
+</div>
+
+           <button class="search-btn">Search</button>
+		</div>
+    </div>
+
+	
+
+
+<!-- Main container -->
+<div id="main-container" style="background: url(img/trsvel2.jpg) rgba(0, 0, 0, 0.5);">
+    <h1>Travel Tips for Exploring Yemen</h1>
+    <p>
+        Whether you're a first-time visitor or a seasoned traveler, exploring Yemen requires careful preparation and respect for local customs.
+        Here, we provide essential travel tips to help you navigate the landscapes, traditions, and unique experiences Yemen has to offer.<br>
+        From packing advice to safety tips, discover everything you need to make your journey safe, enjoyable, and unforgettable.
+    </p>
+</div>
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+<div class="travel-tips-container">
+    <section class="tip-section">
+        <h2>Packing Tips</h2>
+        <p>Make packing a breeze with these essential tips to stay organized and efficient:</p>
+        <ul>
+            <li>Make a checklist of essentials before you start packing.</li>
+            <li>Use packing cubes to keep your suitcase organized.</li>
+            <li>Roll clothes instead of folding to save space and avoid wrinkles.</li>
+            <li>Pack versatile clothing items for multiple occasions.</li>
+            <li>Leave room in your suitcase for souvenirs.</li>
+        </ul>
+    </section>
+
+    <section class="tip-section">
+        <h2>Travel Safety</h2>
+        <p>Safety is key to a successful trip. Here are some travel safety tips to help keep you protected:</p>
+        <ul>
+            <li>Keep a copy of important documents, like your passport and ID.</li>
+            <li>Use a money belt or neck pouch to protect valuables.</li>
+            <li>Stay aware of your surroundings, especially in crowded areas.</li>
+            <li>Learn key phrases in the local language, like "help" and "emergency".</li>
+            <li>Keep emergency numbers easily accessible.</li>
+        </ul>
+    </section>
+
+    <section class="tip-section">
+        <h2>Budgeting Tips</h2>
+        <p>Enjoy your trip without breaking the bank with these budgeting tips:</p>
+        <ul>
+            <li>Plan ahead to secure the best deals on flights and accommodations.</li>
+            <li>Use public transportation to save money on travel.</li>
+            <li>Try local street food to save on dining costs.</li>
+            <li>Set a daily budget and track your spending.</li>
+        </ul>
+    </section>
+
+    <section class="tip-section">
+        <h2>General Travel Tips</h2>
+        <p>Make your journey smooth and enjoyable with these additional travel tips:</p>
+        <ul>
+            <li>Carry a power bank for your devices.</li>
+            <li>Switch to airplane mode when not using mobile data to save battery.</li>
+            <li>Bring a small first-aid kit for emergencies.</li>
+            <li>Download travel apps for maps, language help, and local guides.</li>
+        </ul>
+    </section>
+</div>
+
+
+   <!-- 
+        <section class="section travel-tips">
+            <div class="container">
+                <h2>Packing Tips</h2>
+                <p>Effective packing can save you a lot of stress during your travels. Here are some tips to help you pack like a pro:</p>
+                <ul>
+                    <li>Make a list of essentials before you start packing.</li>
+                    <li>Use packing cubes to organize your clothes.</li>
+                    <li>Roll clothes to save space and reduce wrinkles.</li>
+                    <li>Pack versatile clothing that can be worn multiple ways.</li>
+                    <li>Leave some space for souvenirs!</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section travel-safety">
+            <div class="container">
+                <h2>Travel Safety</h2>
+                <p>Safety should be your priority while traveling. Here are some tips to ensure your journey is as safe as possible:</p>
+                <ul>
+                    <li>Always keep a copy of important documents, like your passport and ID.</li>
+                    <li>Use a money belt or neck pouch for valuables.</li>
+                    <li>Stay aware of your surroundings, especially in crowded areas.</li>
+                    <li>Learn basic phrases in the local language, like "help" and "emergency." </li>
+                    <li>Keep emergency numbers handy at all times.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section travel-budgeting">
+            <div class="container">
+                <h2>Budgeting Tips</h2>
+                <p>Traveling on a budget doesn't mean sacrificing experiences. Here are some tips to stretch your travel funds:</p>
+                <ul>
+                    <li>Plan ahead and book flights and accommodations early for the best prices.</li>
+                    <li>Consider using public transportation rather than taxis or car rentals.</li>
+                    <li>Look for local street food options instead of expensive restaurants.</li>
+                    <li>Use apps to find free activities like sightseeing tours or museum visits.</li>
+                    <li>Set a daily budget and stick to it!</li>
+                </ul>
+            </div>
+        </section>
+
+        
+   
+-->
+
+
+
+
+
+	<!-- About container -->
+	<div id="about-container">
+		<p>Yemen is also known for its warm hospitality, with a rich tradition of welcoming guests and sharing meals, such as the famous Mandi and traditional bread.</br>
+		The diverse landscapes, from the coastal plains to the mountainous regions, provide ample opportunities for adventure and exploration.</p>
+		
+		<a href="https://www.britannica.com/place/Yemen" target="_blank">
+			<button class="explore-button">Explore More About Yemen</button>
+		</a>
+			</div>
+
+
+<!-- Footer -->
+
+<div id="footer-container">
+    <div id="footer">
+        <ul class="footer-content">
+            <li><a href="#" class="contact-link">Contact Us</a></li>
+            <span class="separator"></span> <!-- Separator line -->
+            <li class="social-icons"><a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+            <li class="social-icons"><a href="https://www.instagram.com/17.insta/"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+	<!-- Copyright -->
+	<div id="copyright">
+		<hr>
+		<p>&copy; All Rights Reserved | Designed by: <span><a href="https://github.com/yemeni-coder">yemeni-coder</a></span></p>
+	</div>
+
+
+
+	<script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,875 @@
+/* Global */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+/* Global button */
+
+/* Search button */
+button {
+	height: 2.5rem;
+	padding: 0.5rem 1.5rem;
+	color: #FFF;
+	font-size: 1.2rem;
+	background-color: #aba9a8;
+	border: none;
+	border-radius: 0.3rem;
+	transition: 0.5s;
+	cursor: pointer;
+	gap: 0.5rem;
+}
+
+button:hover {
+	background-color: #F08C00;
+}
+
+/* Header container */
+#header-container {
+	width: 100%;
+}
+
+#header {
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Mobile */
+#open-btn {
+	display: none;
+	font-size: 2rem;
+	color: #000;
+	transition: 0.5s;
+}
+
+#open-btn:hover {
+	color: #F08C00;
+}
+
+#close-btn {
+	position: fixed;
+	top: 1rem;
+	right: 1.5rem;
+	font-size: 2.5rem;
+	color: #FFF;
+	transition: 0.5s;
+	display: none;
+	z-index: 4;
+}
+
+#close-btn:hover {
+	color: #F08C00;
+}
+
+
+
+
+
+
+/* Navbar */
+#navbar {
+	display: flex;
+	align-items: center;
+	height: 1.0%;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+	gap: 0.5rem;
+}
+
+
+/* Navbar Links */
+#navbar ul li a {
+    padding: 0.75rem 1.5rem;
+    color: #000000; /* White text color */
+    font-size: 1.1rem;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+	gap: 1.5rem; 
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth hover effect */
+}
+
+#navbar ul li a.active,
+#navbar ul li a:hover {
+    background-color: #F08C00;
+    color: #FFF;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+/* Logo Container */
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 0.2rem; /* Space around the logo for breathing room */
+}
+
+/* Logo Image */
+.logo img {
+    width: 80px; /* Adjust width for appropriate size */
+    height: auto; /* Maintain aspect ratio */
+    transition: opacity 0.3s ease; /* Smooth hover effect */
+}
+
+
+
+
+
+/* search -------------------------------------------------- */
+.search-overlay {
+	position: fixed;
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: auto;
+	height: 32px;
+	background-color: #2d2d2d;
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	padding: 0 4px;
+	border-radius: 0 0 4px 4px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  
+  .search-container {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+  }
+  
+  #searchInput {
+	width: 180px;
+	height: 24px;
+	background-color: #3c3c3c;
+	border: 1px solid #525252;
+	color: #ffffff;
+	padding: 0 6px;
+	font-size: 13px;
+	border-radius: 3px;
+  }
+  
+  #searchInput:focus {
+	outline: none;
+	border-color: #007acc;
+  }
+  
+  .search-controls {
+	display: flex;
+	align-items: center;
+	margin-left: 4px;
+  }
+  
+  .search-controls button {
+	background: none;
+	border: none;
+	color: #cccccc;
+	padding: 2px 4px;
+	cursor: pointer;
+	font-size: 12px;
+	margin: 0 1px;
+	border-radius: 3px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+  }
+  
+  .search-controls button:hover:not(:disabled) {
+	background-color: #404040;
+  }
+  
+  .search-controls button:disabled {
+	opacity: 0.4;
+	cursor: default;
+  }
+  
+  #searchCount {
+	color: #858585;
+	font-size: 12px;
+	margin: 0 6px;
+	white-space: nowrap;
+  }
+  
+  .hidden {
+	display: none !important;
+  }
+  
+  .search-highlight {
+	background-color: #6f5400;
+	color: white;
+  }
+  
+  .search-highlight.current {
+	background-color: #995800;
+  }
+  
+  /* Close button specific styles */
+  #closeSearch {
+	margin-left: 2px;
+	opacity: 0.7;
+  }
+  
+  #closeSearch:hover {
+	opacity: 1;
+  }
+
+/* search -------------------------------------------------- */
+
+
+
+
+
+/* Main container */
+#main-container {
+	width: 100%;
+	height: 23rem;
+	background: url(img/main.png) rgba(0, 0, 0, 0.5);
+	background-blend-mode: multiply;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#main-container > h1 {
+	font-size: 2.5rem;
+	color: #FFF;
+}
+
+#main-container > p {
+	padding: 0.7rem 0 1.2rem 0;
+	color: #FFF;
+	text-align: center;
+}
+
+/* Blog container */
+#blog-container {
+	width: 100%;
+}
+
+#blog {
+	width: 90%;
+	margin: 2rem auto;
+}
+
+#blog > h2 {
+	display: inline-block;
+	font-size: 2rem;
+}
+
+#blog-container-flex {
+	display: flex;
+}
+
+/* Blog left */
+
+/* ---------------------------------------------------------------------------------- */
+
+/* the read more option */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Disable scrolling */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+
+.popup-content {
+    background-color: #fefefe;
+    margin: auto; /* Centered horizontally */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px; /* Maximum width */
+    text-align: center;
+    position: relative; /* Position relative for inner elements */
+    top: 50%; /* Move down to center vertically */
+    transform: translateY(-50%); /* Adjust position to truly center it */
+}
+
+.popup-content img {
+    width: 300px; /* Set to the same width as .blog-content images */
+    height: 300px; /* Set to the same height */
+    object-fit: cover; /* Ensures the image fills the area without distortion */
+    margin-bottom: 10px; /* Adds spacing below the image if desired */
+    border-radius: 8px; /* Optional: matches the border radius of blog images */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------this is the Efficient way------------------------------------------ 
+
+#blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1%;
+	
+	
+}
+
+.blog-content {
+    width: 48%;
+    height: 15rem;
+    margin: 1rem 0;
+    border: 1px solid #CECECE;
+    display: flex;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.blog-content > img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 1rem;
+    border: 1px solid #CECECE;
+    border-radius: 8px;
+}
+
+.blog-detail {
+    position: relative;
+    margin: 1rem;
+    flex-grow: 1;
+}
+
+.blog-detail > h2 {
+    display: inline-block;
+    color: #666;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.blog-detail > h2:hover {
+    color: #F08C00;
+}
+
+.blog-detail > p {
+    margin: 1rem 0;
+    color: #666;
+}
+
+.blog-detail > a {
+    position: absolute;
+    bottom: 0;
+    padding: 0.6rem 1rem;
+    color: #3E8EA7;
+    border: 1px solid #3E8EA7;
+    border-radius: 0.8rem;
+    transition: 0.5s;
+}
+
+.blog-detail > a:hover {
+    color: #F08C00;
+    border: 1px solid #F08C00;
+}
+/*
+
+
+/* ----------------------this is the basic way two columns------------------------------------- */
+
+
+#blog-container-left,
+#blog-container-right {
+    width: 48%; /* Reduced width slightly to allow space for the gap */
+    margin: 0 1%; /* Adds a 1% margin on each side */
+}
+
+#blog-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2%; /* Optional: Adds a 2% gap between the columns */
+}
+
+.blog-content {
+	width: 100%;
+	height: 15rem;
+	margin: 1rem 0;
+	border: 1px solid #CECECE;
+	display: flex;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+    border-radius: 8px; /* Optional: rounds corners */
+
+}
+
+.blog-content > img {
+	margin: 1rem;
+	border: 1px solid #CECECE;
+}
+
+.blog-detail {
+	position: relative;
+	margin: 1rem;
+}
+
+.blog-detail > h2 {
+	display: inline-block;
+	color: #666;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.blog-detail > h2:hover {
+	color: #F08C00;
+}
+
+.blog-detail > p {
+	margin: 1rem 0;
+	color: #666;
+}
+
+.blog-detail > a {
+	position: absolute;
+	bottom: 0;
+	padding: 0.6rem 1rem;
+	color: #3E8EA7;
+	border: 1px solid #3E8EA7;
+	border-radius: 0.8rem;
+	transition: 0.5s;
+}
+
+.blog-detail > a:hover {
+	color: #F08C00;
+	border: 1px solid #F08C00;
+}
+
+.blog-content > img {
+    width: 200px; /* Set the desired width */
+    height: 200px; /* Set the desired height */
+    object-fit: cover; /* Ensures the image fills the area without distortion */
+    margin: 1rem;
+    border: 1px solid #CECECE;
+    border-radius: 8px; /* Optional: adds rounded corners */
+}
+
+
+
+/* cities  */
+
+#city-container {
+	width: 98%;
+}
+
+/* ------------------------------------------------------ Blog right 
+#blog-container-right {
+	width: 30%;
+}
+
+.right-content {
+	max-width: 100%;
+	margin: 1rem 0 0 2rem;
+	border: 1px solid #CECECE;
+}
+
+.right-content > h2 {
+	color: #FFF;
+	background-color: #2F2E2C;
+	font-size: 2rem;
+	padding: 1rem 0 1rem 1rem;
+}
+
+.right-content-posts {
+	max-width: 100%;
+	height: 6rem;
+	padding: 0 0 1rem 1rem;
+	display: flex;
+}
+
+.right-content-top {
+	margin-top: 1rem;
+}
+
+.right-content-posts > img {
+	max-width: 100%;
+	max-height: 100%;
+	cursor: pointer;
+}
+
+.right-detail {
+	position: relative;
+	width: 100%;
+}
+
+.right-detail > p {
+	color: #666;
+	margin: 0 0.5rem;
+}
+
+.right-detail > p:nth-child(2) {
+	position: absolute;
+	bottom: 0.5rem;
+	margin: 1rem 0 0 0.5rem;
+	font-family: Ariel;
+	font-size: 0.9rem;
+	color: #3E8EA7;
+}
+
+ ----------------------------------------------------- */
+
+
+ 
+/* Add Animation */
+@keyframes slidedown {
+	from {
+		top: -300px; 
+		opacity: 0;
+	}
+	to {
+		top: 0; 
+		opacity: 1;
+	}
+}
+
+/* About container */
+#about-container {
+	width: 100%;
+	height: 23rem;
+	background: url(img/hadramaut.jpg) rgba(0, 0, 0, 0.5);
+	background-blend-mode: multiply;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#about-container > h2 {
+	font-size: 2rem;
+	color: #FFF;
+}
+
+#about-container > p {
+	padding: 0.7rem 0 1.2rem 0;
+	color: #FFF;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+/* Footer Container */
+#footer-container {
+    width: 100%;
+    background-color: #f8f8f8; /* Light background for contrast */
+    border-top: 1px solid #ddd; /* Subtle top border */
+}
+
+/* Footer */
+#footer {
+    width: 80%; /* Adjusted width for better responsiveness */
+    max-width: 1200px; /* Maximum width for large screens */
+    margin: 0 auto;
+    padding: 1rem 0; /* Consistent padding */
+}
+
+/* Footer Content */
+.footer-content {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: center; /* Center items in the footer */
+    align-items: center; /* Center items vertically */
+}
+
+/* Style for Contact Us link */
+.contact-link {
+    background-color: #666; /* Black background */
+    color: #ffffff; /* Text color for contrast */
+    padding: 0.5rem 1rem; /* Padding for spacing around the text */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    margin-right: 1rem; /* Space between link and icons */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for Contact Us link */
+.contact-link:hover {
+    background-color: #ff8c00; /* Darker shade on hover */
+}
+
+/* Separator Line */
+.separator {
+    width: 1px; /* Width of the line */
+    height: 20px; /* Height of the line */
+    background-color: #ccc; /* Color of the line */
+    margin: 0 10px; /* Space on both sides of the line */
+    align-self: center; /* Center the line vertically with other items */
+}
+
+/* Social Icons */
+.social-icons {
+    margin-left: 0.5rem; /* Space between icons */
+}
+
+.social-icons > a {
+    width: 40px; /* Fixed width for icons */
+    height: 40px; /* Fixed height for icons */
+    color: #FFF; /* Icon color */
+    font-size: 1.5rem; /* Larger icons */
+    border-radius: 50%; /* Circular icons */
+    background-color: #666; /* Background color for icons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Hover effect for social icons */
+.social-icons > a:hover {
+    background-color: #F08C00; /* Hover effect */
+}
+
+
+
+/* Copyright */
+#copyright {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#copyright > p {
+	padding: 1rem;
+	color: #777;
+	font-size: small;
+}
+
+#copyright > hr {
+	border: 0;
+	height: 2px;
+	background: #CDCBCB;
+}
+
+#copyright > p > span > a {
+	color: #2AABE4;
+}
+
+/* Media query Tablets, Ipads */
+@media (min-width: 768px) and (max-width: 1024px) {
+	/* Header */
+	.logo > a > img {
+		height: 3rem;
+	}
+	
+	/* Blog left */
+	#blog-container-left {
+		width: 60%;
+	}
+	
+	.blog-content {
+		height: auto;
+		flex-direction: column;
+	}
+	
+	.blog-detail > p {
+		margin-bottom: 4rem;
+	}
+	
+	/* Blog right */
+	#blog-container-right {
+		width: 40%;
+	}
+	
+
+}
+
+
+
+
+
+/* Media query low resolution Tablets, Mobile */
+@media (max-width: 767px) {
+	/* Header */
+	#header {
+		height: 5rem;
+	}
+	
+	.logo > a > img {
+		height: 3rem;
+	}
+	
+	/* Mobile */
+	#open-btn {
+		display: block;
+	}
+	
+	/* Navbar */
+	#navbar {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: #89c7da;
+		z-index: 3;
+		transform: translateY(-100%); /* Initially hide the navbar */
+		transition: transform 0.5s ease-in-out;
+	  }
+	
+	  #navbar.open {
+		transform: translateY(0); /* Slide the navbar in */
+	  }
+	
+	#navbar > ul {
+		margin: auto 0;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	#navbar > ul > li {
+		margin: 2rem 0;
+	}
+	
+	#navbar > ul > li > a {
+		padding: 0.5rem 1.5rem;
+		color: #FFF;
+		font-size: 2rem;
+		text-shadow: 1px 1px 5px #000;
+		font-size: 1.5rem; /* Reduce font size */
+		padding: 0.5rem 1rem; /* Reduce padding */
+		
+	}
+	
+	#navbar > ul > li > .active,
+	#navbar > ul > li > a:hover {
+		color: #F08C00;
+		background-color: transparent;
+	}
+	
+	#navbar > button {
+		display: none;
+	}
+	
+	
+
+
+
+
+	/* Blog container */
+	#blog-container-flex {
+		flex-direction: column;
+	}
+	
+	/* Blog left */
+	#blog-container-left {
+		width: 100%;
+	}
+	
+	.blog-content {
+		height: auto;
+		flex-direction: column;
+	}
+	
+	.blog-content > img {
+		max-height: 100%;
+	}
+	
+	.blog-detail > p {
+		margin-bottom: 4rem;
+	}
+	
+	/* Blog right */
+	#blog-container-right {
+		width: 100%;
+	}
+	
+	.right-content {
+		margin-left: 0;
+	}
+
+	
+	/* Footer */
+	#footer {
+		flex-direction: column;
+	}
+	
+	#footer > ul {
+		width: 90%;
+		margin: 1rem 0;
+	}
+	.footer-vline {
+		border: none;
+	}
+	
+	#footer > ul > p {
+		padding: 1rem 0;
+	}
+}

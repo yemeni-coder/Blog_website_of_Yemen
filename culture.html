@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blog Website</title>
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+.contint-container {
+    max-width: 900px;
+    margin: 10px auto;  /* The distance between the container of the content and the image at the top*/
+    
+}
+
+.content-section {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative; /* Keeps it in the normal flow */
+    z-index: 0; /* Lower stacking order than culture-intro */
+}
+
+/* Remaining sections */
+.section {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the text */
+    
+
+}
+
+/* Carousel Container Styling */
+.image-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+    height: 300px; /* Fixed height for consistency */
+    margin: 20px auto;
+    overflow: hidden;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+}
+
+.carousel-image {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps images fixed within the container */
+    border-radius: 8px;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+/* Button Styling */
+.carousel-btn {
+    position: absolute;
+    right: 10px; /* Position both buttons on the right */
+    font-size: 18px;
+    color: #333;
+    background: none;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.carousel-btn.left {
+    top: 40%; /* Adjusts vertical position for the left button */
+}
+
+.carousel-btn.right {
+    top: 60%; /* Adjusts vertical position for the right button, below the left */
+}
+
+.carousel-btn:hover {
+    background: #f0f0f0;
+    border-color: #999;
+}
+
+
+    </style>
+    
+</style>
+</head>
+
+<body>
+	<!-- Header container -->
+	<!-- Header container -->
+	<div id="header-container">
+        <!-- Header -->
+        <div id="header">
+
+
+            <!-- Logo -->
+            <a href="index.html">
+				<div class="logo">
+				  <img src="img/logo2.png" alt="logo">
+				</div>
+			  </a>
+            
+            <!-- Mobile -->
+            <div id="mobile-btn">
+                <a id="open-btn" href="javascript:void(0);" onclick="openNav();"><i class="fa fa-bars"></i></a>
+                <a id="close-btn" href="javascript:void(0);" onclick="closeNav();"><i class="fa fa-times"></i></a>
+            </div>
+    
+            <!-- Navbar -->
+            <div id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="cities.html">Cities</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="travel-tips.html">Travel Tips</a></li>
+                </ul>
+            </div>
+    
+           
+<div id="searchOverlay" class="search-overlay hidden">
+	<div class="search-container">
+	  <input type="text" id="searchInput" placeholder="Find on page...">
+	  <div class="search-controls">
+		     <span id="searchCount">No results</span>
+		     <button id="prevMatch" disabled>↑</button>
+		     <button id="nextMatch" disabled>↓</button>
+		     <button id="closeSearch">✕</button>
+	</div>
+	        </div>
+</div>
+
+           <button class="search-btn">Search</button>
+		</div>
+    </div>
+
+
+
+	
+
+
+    <!-- Main container -->
+<div id="main-container" style="background: url(img/yemen0000y.jpg) rgba(0, 0, 0, 0.5);">
+    <h1>Yemen Culture: Traditions and Daily Practices</h1>
+    <p>
+        Yemen has a rich cultural heritage that spans thousands of years, the country’s history and identity. and practices that reflect the country’s history and identity. <br> 
+        Below, we explore some of the most notable aspects of Yemeni culture, from language and attire to food and social customs.
+    </p>
+</div>
+
+
+
+   
+
+
+<div class="contint-container">
+
+
+    <section class="section">
+        <h2>1. Traditional Clothing</h2>
+        <p>Yemen’s traditional clothing is both practical and symbolic, reflecting its environment and social customs. Men typically wear a thobe or a long dress known as a “jambiya,” often accompanied by a dagger worn around the waist. Women wear colorful dresses with scarves or veils, with styles varying by region.</p>
+        <div class="image-carousel" id="carousel2">
+            <button class="carousel-btn left" onclick="prevImage('carousel2')">&#10094;</button>
+            
+            <img src="img/yemen778.jpg" alt="Image 1" class="carousel-image active">
+            <img src="img/yemen8989.jpg" alt="Image 2" class="carousel-image">
+            <img src="img/yemen0909.jpg" alt="Image 3" class="carousel-image">
+            
+            <button class="carousel-btn right" onclick="nextImage('carousel2')">&#10095;</button>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <h2>2. Language and Communication</h2>
+        <p>Arabic is the official language in Yemen, with dialects that vary by region. Traditional languages such as Sabaean were spoken in ancient times, and these historical influences still appear in some dialects today. Verbal greetings are central to Yemeni hospitality, often accompanied by warm handshakes or gestures.</p>
+        <div class="image-carousel" id="carousel1">
+            <button class="carousel-btn left" onclick="prevImage('carousel1')">&#10094;</button>
+            
+            <img src="img/yemen7117.jpg" alt="Image 1" class="carousel-image active">
+            <img src="img/yemen551.png" alt="Image 2" class="carousel-image">
+            <img src="img/yemen557.jpg" alt="Image 3" class="carousel-image">
+            
+            <button class="carousel-btn right" onclick="nextImage('carousel1')">&#10095;</button>
+        </div>
+    </section>
+
+    
+    <section class="section">
+        <h2>3. Cuisine and Culinary Traditions</h2>
+        <p>Yemeni cuisine is known for its rich flavors and unique dishes, such as “saltah,” a stew topped with fenugreek, and “bint al-sahn,” a honey-covered bread dessert. Meals are often communal, served on a large platter to be shared with family or friends, emphasizing community and togetherness.</p>
+        <div class="image-carousel" id="carousel3">
+            <button class="carousel-btn left" onclick="prevImage('carousel3')">&#10094;</button>
+            
+            <img src="img/yemen878.jpg" alt="Image 1" class="carousel-image active">
+            <img src="img/yemen1212.jpg" alt="Image 2" class="carousel-image">
+            <img src="img/yemen98988.jpg" alt="Image 3" class="carousel-image">
+            
+            <button class="carousel-btn right" onclick="nextImage('carousel3')">&#10095;</button>
+        </div>
+    </section>
+    
+    <section class="section">
+        <h2>4. Social Customs and Gatherings</h2>
+        <p>Hospitality is a core value in Yemen, with gatherings often centered around coffee or tea. It’s customary to offer guests coffee, tea, or even a meal as a gesture of warmth. Social gatherings often include the tradition of chewing "qat," a mild stimulant that has deep cultural roots in Yemen.</p>
+        <div class="image-carousel" id="carousel4">
+            <button class="carousel-btn left" onclick="prevImage('carousel4')">&#10094;</button>
+            
+            <img src="img/yemen8989.jpg" alt="Image 1" class="carousel-image active">
+            <img src="img/yemen778.jpg" alt="Image 2" class="carousel-image">
+            <img src="img/yemen0909.jpg" alt="Image 3" class="carousel-image">
+            
+            <button class="carousel-btn right" onclick="nextImage('carousel4')">&#10095;</button>
+        </div>
+    </section>
+    
+    <section class="section">
+        <h2>5. Arts and Handicrafts</h2>
+        <p>Yemeni artisans are known for their intricate handicrafts, from silver jewelry and pottery to embroidered fabrics. Each region has its own distinct craft traditions, reflecting the diversity of Yemen’s culture. Music and dance also play an essential role, with unique styles like the “bara” dance performed at special occasions.</p>
+        <div class="image-carousel" id="carousel5">
+            <button class="carousel-btn left" onclick="prevImage('carousel5')">&#10094;</button>
+            
+            <img src="img/yemen13.jpg" alt="Image 1" class="carousel-image active">
+            <img src="img/yemen9090.jpg" alt="Image 2" class="carousel-image">
+            <img src="img/yemen15.jpg" alt="Image 3" class="carousel-image">
+            
+            <button class="carousel-btn right" onclick="nextImage('carousel5')">&#10095;</button>
+        </div>
+    </section>
+    
+    <section class="section">
+        <h2>6. Festivals and Celebrations</h2>
+        <p>Yemen celebrates Islamic festivals such as Eid al-Fitr and Eid al-Adha with traditional feasts and family gatherings. Weddings and other significant life events are marked by cultural ceremonies that vary by region, often including dance, music, and a strong sense of community.</p>
+        <div class="image-carousel" id="carousel6">
+            <button class="carousel-btn left" onclick="prevImage('carousel6')">&#10094;</button>
+            
+            <img src="img/yemen000.jpg" alt="Image 1" class="carousel-image active">
+            <img src="img/yemen01.jpg" alt="Image 2" class="carousel-image">
+            <img src="img/yemen879.jpg" alt="Image 3" class="carousel-image">
+            
+            <button class="carousel-btn right" onclick="nextImage('carousel6')">&#10095;</button>
+        </div>
+    </section>
+
+</div>
+
+
+
+
+
+	<!-- About container -->
+	<div id="about-container">
+		<p>Yemen is also known for its warm hospitality, with a rich tradition of welcoming guests and sharing meals, such as the famous Mandi and traditional bread.</br>
+		The diverse landscapes, from the coastal plains to the mountainous regions, provide ample opportunities for adventure and exploration.</p>
+		
+		<a href="https://www.britannica.com/place/Yemen" target="_blank">
+			<button class="explore-button">Explore More About Yemen</button>
+		</a>
+			</div>
+
+
+<!-- Footer -->
+
+<div id="footer-container">
+    <div id="footer">
+        <ul class="footer-content">
+            <li><a href="#" class="contact-link">Contact Us</a></li>
+            <span class="separator"></span> <!-- Separator line -->
+            <li class="social-icons"><a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+            <li class="social-icons"><a href="https://www.instagram.com/17.insta/"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+	<!-- Copyright -->
+	<div id="copyright">
+		<hr>
+		<p>&copy; All Rights Reserved | Designed by: <span><a href="https://github.com/yemeni-coder">yemeni-coder</a></span></p>
+	</div>
+
+
+
+	<script src="script.js"></script>
+</body>
+
+</html>

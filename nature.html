@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blog Website </title>
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+.content-section {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* Keeps it in the normal flow */
+    z-index: 0; /* Lower stacking order than culture-intro */
+}
+
+/* Remaining sections */
+.section {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel Container Styling */
+.image-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+    height: 300px; /* Fixed height for consistency */
+    margin: 20px auto;
+    overflow: hidden;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+}
+
+.carousel-image {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps images fixed within the container */
+    border-radius: 8px;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+/* Button Styling */
+.carousel-btn {
+    position: absolute;
+    right: 10px; /* Position both buttons on the right */
+    font-size: 18px;
+    color: #333;
+    background: none;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.carousel-btn.left {
+    top: 40%; /* Adjusts vertical position for the left button */
+}
+
+.carousel-btn.right {
+    top: 60%; /* Adjusts vertical position for the right button, below the left */
+}
+
+.carousel-btn:hover {
+    background: #f0f0f0;
+    border-color: #999;
+}
+
+
+    </style>
+    
+</style>
+</head>
+
+<body>
+	<!-- Header container -->
+	<div id="header-container">
+		<!-- Header -->
+		<div id="header">
+
+
+			 <!-- Logo -->
+             <a href="index.html">
+				<div class="logo">
+				  <img src="img/logo2.png" alt="logo">
+				</div>
+			  </a>
+
+
+			<!-- Mobile -->
+			<div id="mobile-btn">
+				<a id="open-btn" href="javascript:void(0);" onclick="openNav();"><i class="fa fa-bars"></i></a>
+				<a id="close-btn" href="javascript:void(0);" onclick="closeNav();"><i class="fa fa-times"></i></a>
+			</div>
+
+
+			<!-- Navbar -->
+			<div id="navbar">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="history.html">History</a></li>
+					<li><a href="cities.html">Cities</a></li>
+					<li><a href="culture.html">Culture</a></li>
+					<li><a href="travel-tips.html">Travel Tips</a></li>
+				</ul>
+			</div>
+				
+
+
+            <div id="searchOverlay" class="search-overlay hidden">
+                <div class="search-container">
+                  <input type="text" id="searchInput" placeholder="Find on page...">
+                  <div class="search-controls">
+                         <span id="searchCount">No results</span>
+                         <button id="prevMatch" disabled>↑</button>
+                         <button id="nextMatch" disabled>↓</button>
+                         <button id="closeSearch">✕</button>
+                </div>
+                        </div>
+            </div>
+            
+                       <button class="search-btn">Search</button>
+                    </div>
+                </div>
+            
+
+
+				
+			</div>
+		</div>
+	</div>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- About container -->
+	<div id="about-container">
+		<p>Yemen is also known for its warm hospitality, with a rich tradition of welcoming guests and sharing meals, such as the famous Mandi and traditional bread.</br>
+		The diverse landscapes, from the coastal plains to the mountainous regions, provide ample opportunities for adventure and exploration.</p>
+		
+		<a href="https://www.britannica.com/place/Yemen" target="_blank">
+			<button class="explore-button">Explore More About Yemen</button>
+		</a>
+			</div>
+
+
+	<!-- Footer -->
+
+<div id="footer-container">
+    <div id="footer">
+        <ul class="footer-content">
+            <li><a href="#" class="contact-link">Contact Us</a></li>
+            <span class="separator"></span> <!-- Separator line -->
+            <li class="social-icons"><a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+            <li class="social-icons"><a href="https://www.instagram.com/17.insta/"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+	<!-- Copyright -->
+	<div id="copyright">
+		<hr>
+		<p>&copy; All Rights Reserved | Designed by: <span><a href="https://github.com/yemeni-coder">yemeni-coder</a></span></p>
+	</div>
+
+
+
+	<script src="script.js"></script>
+</body>
+
+</html>

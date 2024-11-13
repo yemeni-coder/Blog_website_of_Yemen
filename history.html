@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blog Website </title>
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ <style>
+  
+    
+    header {
+        background-color: #005700; /* Darker green for better contrast */
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .main-container {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 30px; /* Increased padding for a more spacious feel */
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .intro-section, .conclusion-section {
+        background-color: #e9f5e9; /* Light green background for sections */
+        border-left: 5px solid #005700; /* Match border with header color */
+        padding: 15px 20px;
+        border-radius: 5px;
+        margin-bottom: 30px; /* Space between sections */
+    }
+    
+    .history-section {
+        margin-bottom: 40px; /* Increased margin for better separation */
+    }
+    
+    .history-section h2 {
+        color: #005700; /* Match section heading color with header */
+        font-size: 1.8em; /* Slightly larger font for headings */
+        margin-bottom: 10px; /* Space below headings */
+    }
+    
+    .history-section p {
+        line-height: 1.8; /* Increased line height for better readability */
+        font-size: 1.1em; /* Slightly larger font size for body text */
+        color: #333; /* Darker text color for contrast */
+        margin-bottom: 15px; /* Space between paragraphs */
+    }
+    
+    
+    /* Add hover effect for history section headings */
+    .history-section h2:hover {
+        color: #ffaa00; /* Change color on hover */
+        cursor: pointer; /* Indicate interactivity */
+        text-decoration: underline; /* Add underline for emphasis */
+    }
+    
+    .history-section {
+    margin-bottom: 2rem; /* Space between sections */
+}
+
+.image-placeholder {
+    display: flex; /* Align images side by side */
+    gap: 1rem; /* Space between images */
+    justify-content: center; /* Center the images in the container */
+    margin: 1rem 0;
+}
+
+.image-placeholder img {
+    width: 24%; /* Smaller width for each image */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+}
+
+
+    </style>
+    
+</head>
+
+<body>
+	<!-- Header container -->
+	<!-- Header container -->
+	<div id="header-container">
+        <!-- Header -->
+        <div id="header">
+
+
+            <!-- Logo -->
+            <a href="index.html">
+				<div class="logo">
+				  <img src="img/logo2.png" alt="logo">
+				</div>
+			  </a>
+            
+            <!-- Mobile -->
+            <div id="mobile-btn">
+                <a id="open-btn" href="javascript:void(0);" onclick="openNav();"><i class="fa fa-bars"></i></a>
+                <a id="close-btn" href="javascript:void(0);" onclick="closeNav();"><i class="fa fa-times"></i></a>
+            </div>
+    
+            <!-- Navbar -->
+            <div id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="cities.html">Cities</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="travel-tips.html">Travel Tips</a></li>
+                </ul>
+            </div>
+    
+<div id="searchOverlay" class="search-overlay hidden">
+	<div class="search-container">
+	  <input type="text" id="searchInput" placeholder="Find on page...">
+	  <div class="search-controls">
+		     <span id="searchCount">No results</span>
+		     <button id="prevMatch" disabled>↑</button>
+		     <button id="nextMatch" disabled>↓</button>
+		     <button id="closeSearch">✕</button>
+	</div>
+	        </div>
+</div>
+
+           <button class="search-btn">Search</button>
+		</div>
+    </div>
+
+
+
+<!-- Main container -->
+<div id="main-container" style="background: url(img/yemen7777.jpg) rgba(0, 0, 0, 0.5);">
+    <h1>History of Yemen</h1>
+    <p>Yemen is a country located at the southern end of the Arabian Peninsula, known for its rich history and diverse culture.</br> 
+    It has been a crossroads for civilizations for thousands of years, featuring ancient trade routes that connected the East and West.</p>
+
+   <!-- <button>Explore Yemen</button>  -->
+</div>
+
+
+
+
+
+    
+<main class="main-container">
+    <section class="history-section">
+        <h2>1. Ancient Civilizations</h2>
+        <p>
+            Yemen's history dates back thousands of years, with evidence of ancient civilizations like the Sabaeans and Himyarites.
+            The region was a major player in trade routes, connecting Arabia to Africa and Asia. The capital of the Sabaean kingdom, Ma'rib, 
+            was known for its impressive dam, which was an engineering marvel of its time.
+        </p>
+    </section>
+    
+    <section class="history-section">
+        <h2>2. The Islamic Conquest</h2>
+        <p>
+            In the 7th century, Yemen embraced Islam during the time of Prophet Muhammad. 
+            The region became crucial for the early Islamic community, serving as a base for further expansions into the Arabian Peninsula and beyond.
+            The Zaydi imams later established significant political power in northern Yemen.
+        </p>
+    </section>
+
+    <section class="history-section">
+        <h2>3. The Ottoman Era</h2>
+        <p>
+            Yemen was incorporated into the Ottoman Empire in the 16th century. 
+            This period saw significant administrative changes and architectural developments. 
+            The Ottomans attempted to control trade and manage local governance, leading to a unique blend of cultures and influences.
+        </p>
+    </section>
+
+    <section class="history-section">
+        <h2>4. The Modern State</h2>
+        <p>
+            The 20th century brought about dramatic changes, including the struggle for independence from British colonial rule in the south, leading to the establishment of the People's Democratic Republic of Yemen in 1967. 
+            The unification of North and South Yemen in 1990 marked a significant moment in the nation’s history.
+        </p>
+    </section>
+    
+    <section class="history-section">
+        <h2>5. Language in Yemen's History</h2>
+        <div class="image-placeholder">
+            <img src="img/yemen555.jpg" alt="Historical Yemen Language Script">
+            <img src="img/yemen551.png" alt="Ancient Yemen Language Text">
+            <img src="img/yemen556.jpg" alt="Ancient Yemen Language Text">
+            <img src="img/yemen557.jpg" alt="Ancient Yemen Language Text">
+
+        </div>
+        <p>
+            Yemen has a rich linguistic history, with ancient languages such as Sabaean and Himyaritic that were once spoken in the region.
+            These languages were part of the Old South Arabian language group, which had unique scripts and inscriptions that can still be found in historical sites today.
+            Over time, Arabic became predominant with the spread of Islam, though Yemen's dialects retain influences from earlier languages.
+            In modern times, the Arabic language, specifically the Yemeni dialect, reflects Yemen’s diverse cultural history, with variations across different regions.
+        </p>
+    </section>
+
+    <section class="history-section">
+        <h2>6. Recent Developments</h2>
+        <p>
+            Yemen has faced significant challenges in the 21st century, including civil war and humanitarian crises. 
+            Efforts for peace continue amidst the ongoing struggles, highlighting the resilience of the Yemeni people and their rich cultural heritage.
+        </p>
+    </section>
+
+   
+    
+
+</main>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- About container -->
+	<div id="about-container">
+		<h2>Explore The Universe</h2>
+        <p>
+            The history of Yemen is a tapestry woven from the threads of ancient civilizations, cultural exchanges, and the resilience of its people. 
+            From the legendary kingdoms of the Sabaeans and Himyarites to the modern struggles for peace and stability, Yemen's past informs its present 
+            and shapes its future. As we reflect on the historical milestones that have defined Yemen, it becomes clear that understanding this rich heritage 
+            is vital to appreciating the culture and identity of the Yemeni people today.
+        </p>		
+        <a href="https://www.britannica.com/place/Yemen/Arab-Spring-uprising" target="_blank">
+            <button class="explore-button">More about History of Yemen</button>
+        </a>
+        
+	</div>
+
+<!-- Footer -->
+
+<div id="footer-container">
+    <div id="footer">
+        <ul class="footer-content">
+            <li><a href="#" class="contact-link">Contact Us</a></li>
+            <span class="separator"></span> <!-- Separator line -->
+            <li class="social-icons"><a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+            <li class="social-icons"><a href="https://www.instagram.com/17.insta/"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+	<!-- Copyright -->
+	<div id="copyright">
+		<hr>
+		<p>&copy; All Rights Reserved | Designed by: <span><a href="https://github.com/yemeni-coder">yemeni-coder</a></span></p>
+	</div>
+
+
+
+	<script src="script.js"></script>
+</body>
+
+</html>
