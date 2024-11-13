@@ -55,8 +55,54 @@ function closePopup() {
 
 
 
-  
 
+
+// contact us form and button ----------------------------------------------------------
+
+const contactLink = document.getElementById("contact-link");
+const contactForm = document.getElementById("contact-form");
+const successMessage = document.getElementById("success-message");
+const contactFormContent = document.getElementById("contact-form-content");
+
+contactLink.addEventListener("click", function(event) {
+  event.preventDefault();
+  contactForm.style.display = "block";
+});
+
+contactFormContent.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  // Simulate form submission and display success message
+  successMessage.style.display = "block";
+  contactFormContent.style.display = "none";
+
+   // Hide the success message after 3 seconds
+   setTimeout(() => {
+    successMessage.style.display = "none";
+  }, 3000);
+});
+
+
+  
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+// for smal screen navbar
 
 function openNav() {
     document.getElementById("navbar").classList.add("open");

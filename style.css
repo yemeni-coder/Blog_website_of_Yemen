@@ -720,6 +720,68 @@ button:hover {
 	color: #2AABE4;
 }
 
+
+
+
+
+
+/*---------------------------contact us form -------------------------------------------*/
+
+#contact-form {
+	/* Reduce the width of the form */
+	width: 400px;
+	/* Center the form horizontally */
+	margin: 0 auto;
+	/* Add some padding to the form */
+	padding: 20px;
+  }
+  
+  /* Other CSS styles remain the same */
+  
+  #contact-form h2 {
+	margin-bottom: 10px;
+  }
+  
+  #contact-form label {
+	display: block;
+	margin-bottom: 5px;
+  }
+  
+  #contact-form input, #contact-form textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+  }
+  
+  #contact-form button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+  }
+  
+  #success-message {
+	color: green;
+	font-weight: bold;
+	margin-top: 10px;
+  }
+
+
+  
+
+  @media (max-width: 768px) {
+	#contact-form {
+	  width: 100%;
+	  padding: 10px;
+	}
+  }
+  
+
+
 /* Media query Tablets, Ipads */
 @media (min-width: 768px) and (max-width: 1024px) {
 	/* Header */

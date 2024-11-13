@@ -299,16 +299,31 @@
 
 	<!-- Footer -->
 
-<div id="footer-container">
-    <div id="footer">
-        <ul class="footer-content">
-            <li><a href="#" class="contact-link">Contact Us</a></li>
-            <span class="separator"></span> <!-- Separator line -->
-            <li class="social-icons"><a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
-            <li class="social-icons"><a href="https://www.instagram.com/17.insta/"><i class="fa fa-instagram"></i></a></li>
-        </ul>
-    </div>
-</div>
+	<div id="footer-container">
+		<div id="footer">
+		  <ul class="footer-content">
+			<li><a href="#" id="contact-link" class="contact-link">Contact Us</a></li>
+			<span class="separator"></span>
+			<li class="social-icons"><a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+			<li class="social-icons"><a href="https://www.instagram.com/17.insta/"><i class="fa fa-instagram"></i></a></li>
+		  </ul>
+		  <div id="contact-form" style="display: none;">
+			<form id="contact-form-content">
+			  <h2>Contact Us</h2>
+			  <label for="name">Name:</label>
+			  <input type="text" id="name" name="name" required>
+			  <label for="email">Email:</label>
+			  <input type="email" id="email" name="email" required>
+			  <label for="message">Message:</label>
+			  <textarea id="message" name="message" required></textarea>
+			  <button type="submit">Submit</button>
+			</form>
+			<div id="success-message" style="display: none; text-align: center;">
+			  Thank you for contacting us.
+			</div>
+		  </div>
+		</div>
+	  </div>
 
 
 
